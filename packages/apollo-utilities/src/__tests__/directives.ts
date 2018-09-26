@@ -48,6 +48,7 @@ describe('hasDirective', () => {
         }
       }
     `;
+
     [query, mutation, subscription].forEach(x => {
       expect(hasDirectives(['live'], x)).toBe(true);
       expect(hasDirectives(['defer'], x)).toBe(false);
